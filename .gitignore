@@ -1,6 +1,6 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
-# Created by https://www.toptal.com/developers/gitignore/api/dotenv,terraform
-# Edit at https://www.toptal.com/developers/gitignore?templates=dotenv,terraform
+# Created by https://www.toptal.com/developers/gitignore/api/terraform,dotenv,venv
+# Edit at https://www.toptal.com/developers/gitignore?templates=terraform,dotenv,venv
 
 ### dotenv ###
 .env
@@ -41,7 +41,20 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# End of https://www.toptal.com/developers/gitignore/api/dotenv,terraform
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
+# End of https://www.toptal.com/developers/gitignore/api/terraform,dotenv,venv
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
-

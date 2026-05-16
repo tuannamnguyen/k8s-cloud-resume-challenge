@@ -9,3 +9,8 @@ variable "aws_profile" {
   type        = string
   default     = "admin-access"
 }
+
+variable "project_name" {
+  type    = string
+  default = "k8s-resume-challenge"
+}
