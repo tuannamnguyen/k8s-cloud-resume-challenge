@@ -1,10 +1,10 @@
  .clients_testimonials_area{
     background: url("../img/testy_bg.jpg") no-repeat fixed;
-    background-position: center; 
+    background-position: center;
     padding-top: 120px;
     position: relative;
     display: block;
-    overflow: hidden; 
+    overflow: hidden;
      z-index: 3;
      &:after{
          content: "";
@@ -70,38 +70,37 @@
                 .owl-prev{
                     display: inline-block;
                     padding-right: 80px;
-                    @include transition;  
-                    &:hover, &:focus{ 
+                    @include transition;
+                    &:hover, &:focus{
                         h5, i{
                             color: $hover;
-                        } 
+                        }
                     }
                     i{
                         padding-right: 15px;
                         font-size: 16px;
                         @include transition;
                         color: $heading;
-                    } 
+                    }
                 }
                 .owl-next{
-                    display: inline-block; 
-                    &:hover, &:focus{ 
+                    display: inline-block;
+                    &:hover, &:focus{
                         h5, i{
                             color: $hover;
-                        } 
+                        }
                     }
                     i{
                         padding-left: 15px;
                         font-size: 16px;
                         @include transition;
                         color: $heading;
-                    } 
+                    }
                 }
             }
         }
     }
      /* End other_testimonial_area */
 }
-/* Clients_testimonials_area end 
-============================================================================================ */ 
- 
+/* Clients_testimonials_area end
+============================================================================================ */

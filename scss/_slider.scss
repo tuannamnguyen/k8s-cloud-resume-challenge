@@ -1,13 +1,13 @@
 /* Main Slider area css
 ============================================================================================ */
-.slider_area{ 
+.slider_area{
     background: url("../img/slider.jpg") no-repeat;
-    background-position: center;  
+    background-position: center;
     background-size: cover;
     .slider_inner{
         position: relative;
         height: 100vh;
-        .camera_caption{ 
+        .camera_caption{
             text-align: center;
             position: absolute;
             top: 50%;
@@ -24,7 +24,7 @@
                 padding-bottom: 55px;
                 color: #fff;
                 padding-top: 40px;
-            } 
+            }
             .learn_mor{
                 text-transform: uppercase;
                 color: #fff;
@@ -39,11 +39,9 @@
                     background: #fff;
                     color: $heading;
                 }
-            } 
+            }
         }
     }
-} 
+}
 /* End Main Slider area css
-============================================================================================ */ 
- 
-
+============================================================================================ */

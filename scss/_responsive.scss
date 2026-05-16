@@ -44,7 +44,7 @@
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         background: #fff;
     }
-    .navbar.navbar-default{ 
+    .navbar.navbar-default{
         .main_nav{
             padding-top: 0;
              li{
@@ -70,8 +70,8 @@
                 padding-left: 10px;
                 line-height: 40px !important;
             }
-        } 
-    }  
+        }
+    }
     .navbar-default.menu_bg .navbar-toggle{
         margin-top: 17px;
     }
@@ -79,7 +79,7 @@
         font-size: 50px;
         line-height: 60px;
     }
-    
+
     .address_area .address_row .address{
         padding: 60px;
         padding-top: 30px;
@@ -99,7 +99,7 @@
     }
     .clients_testimonials_area .other_testimonial_area .item .media .media-left {
         padding-right: 0;
-        display: block; 
+        display: block;
         margin: 0 auto;
         max-width: 285px;
     }
@@ -117,8 +117,8 @@
         padding-bottom: 40px;
     }
     .cuntrap_area .media {
-        width: 50%; 
-    }  
+        width: 50%;
+    }
     .footer_area .copy_right_area .nav_footer{
         display: block;
         float: none;
@@ -134,7 +134,7 @@
     .about_rogram .about_images{
         text-align: center;
         .item {
-            padding-left: 0; 
+            padding-left: 0;
             padding-bottom: 20px;
         }
         .item2 {
@@ -145,17 +145,17 @@
         .item3 {
             position: relative;
             right: auto;
-            top: auto; 
+            top: auto;
         }
-    }  
-}  
-@media (max-width:767px){ 
+    }
+}
+@media (max-width:767px){
     .slider_area .slider_inner .camera_caption div h2{
         font-size: 30px;
         line-height: 40px;
     }
-    .slider_area .slider_inner .camera_caption div h5 { 
-        padding-bottom: 30px; 
+    .slider_area .slider_inner .camera_caption div h5 {
+        padding-bottom: 30px;
         padding-top: 20px;
     }
     .check_tittle h2{
@@ -177,10 +177,10 @@
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    
+
     .cuntrap_area .media {
-        width: 100%; 
-    } 
+        width: 100%;
+    }
     .footer_area .subscribe_area .news_letter{
         .form-group{
             background-color: transparent;
@@ -193,7 +193,7 @@
                 line-height: 60px;
             }
         }
-    } 
+    }
     .footer_area .footer_from_area .from_main .form-group.mail_p {
         padding-right: 15px;
     }
@@ -213,18 +213,18 @@
             line-height: 26px;
             padding-bottom: 20px;
         }
-    } 
+    }
     .slider_area .slider_inner .camera_caption h2{
         font-size: 30px;
     }
-    .slider_area .slider_inner .camera_caption h5 { 
-        padding-bottom: 25px; 
+    .slider_area .slider_inner .camera_caption h5 {
+        padding-bottom: 25px;
         padding-top: 0px;
     }
-    .slider_area .slider_inner { 
+    .slider_area .slider_inner {
         height: 500px;
     }
-}   
+}
 @media (max-width:360px){
     .address_area .address_row .address{
         padding: 15px;
@@ -235,5 +235,5 @@
 }
 
 @media (max-width:320px){
-    
+
 }

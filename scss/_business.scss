@@ -1,7 +1,7 @@
-.best_business_area{  
-    padding: 100px 165px 40px; 
+.best_business_area{
+    padding: 100px 165px 40px;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     &:before{
         content: "Why Choose Us";
         position: absolute;
@@ -14,9 +14,9 @@
         letter-spacing: 4px;
     }
     .it_works{
-        position: relative; 
+        position: relative;
         padding-top: 90px;
-        z-index: 1; 
+        z-index: 1;
         .business_content{
             padding-bottom: 30px;
             img{
@@ -39,7 +39,7 @@
                 .media-body{
                     padding-top: 15px;
                     a{
-                        font: 500 18px $fira; 
+                        font: 500 18px $fira;
                         color: $heading;
                     }
                     p{
@@ -47,15 +47,14 @@
                         color: $p;
                         padding-top: 10px;
                         color: $p;
-                    } 
+                    }
                 }
                 &:hover, &:focus{
                     .media-body a{
                         color: $hover;
                     }
                 }
-            } 
+            }
         }
     }
-}   
- 
+}

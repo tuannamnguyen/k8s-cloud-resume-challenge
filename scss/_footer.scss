@@ -1,9 +1,9 @@
 .footer_area{
     background: url("../img/footer.jpg") no-repeat fixed;
-    background-position: center;  
+    background-position: center;
     position: relative;
     display: block;
-    overflow: hidden; 
+    overflow: hidden;
      z-index: 3;
      &:after{
          content: "";
@@ -57,7 +57,7 @@
                     border-radius: 30px;
                     margin-right: 5px;
                     &:hover, &:focus{
-                        background: $heading; 
+                        background: $heading;
                     }
                 }
             }
@@ -78,13 +78,13 @@
         padding-bottom: 100px;
         border-bottom: 1px solid #48626f;
         .from_main{
-            max-width: 815px; 
+            max-width: 815px;
             margin: 0 auto;
             .form-group{
                 .form-control{
                     font: 400 15px/60px $muli;
                     color: #878f9a;
-                    width: 100%; 
+                    width: 100%;
                     height: auto;
                     background-color: #fff;
                     padding: 0;
@@ -105,7 +105,7 @@
                 &.sub_p{
                     padding-left: 6px;
                 }
-                
+
                 button{
                     font: 600 16px/60px $fira;
                     color: #fff;
@@ -124,14 +124,14 @@
                         color: #878f9a;
                     }
                 }
-            } 
+            }
         }
     }
-    .copy_right_area{  
-        .copy_right{ 
+    .copy_right_area{
+        .copy_right{
             font: 400 16px/70px $muli;
             color: #fff;
             text-align:center;
         }
     }
-}    
+}

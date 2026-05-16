@@ -11,7 +11,7 @@
         height: 0;
         border-bottom: 1px solid transparent;
         overflow: hidden;
-        transition: all 300ms linear 0s; 
+        transition: all 300ms linear 0s;
         .input-group-addon{
             border-radius: 0;
             border: none;
@@ -34,23 +34,23 @@
     .show {
         height: 80px;
         border-bottom-color: rgba(255, 255, 255, 0.1);
-    } 
-    
-    .navbar-header{  
-        .navbar-brand{ 
+    }
+
+    .navbar-header{
+        .navbar-brand{
             padding-top:35px;
             img{
-                max-width: 100%; 
+                max-width: 100%;
                 +img{
                     display: none;
                 }
             }
-        } 
-    } 
+        }
+    }
     .main_nav{
         float: none;
         display: block;
-        text-align: center; 
+        text-align: center;
         padding-top: 20px;
         li{
             display: inline-block;
@@ -71,7 +71,7 @@
                 a{
                     padding-left: 0px;
                 }
-            }  
+            }
         }
     }
     .navbar-nav.navbar-right{
@@ -83,7 +83,7 @@
                 margin-right: -10px;
                 display: block;
                 background-color: transparent;
-                color: #fff;  
+                color: #fff;
                 &:hover, &:focus{
                     color: $hover;
                 }
@@ -92,20 +92,20 @@
                     font-weight: bold;
                     line-height: 80px;
                 }
-            } 
+            }
         }
-    } 
+    }
 }
 /* End Main Menu css
 ============================================================================================ */
- 
+
 .menu_bg{
     background: #fff !important;
-    z-index: 9999 !important; 
-    @include transition;  
+    z-index: 9999 !important;
+    @include transition;
     .navbar-header{
-         padding-top: 0 !important;  
-        .navbar-brand{ 
+         padding-top: 0 !important;
+        .navbar-brand{
             padding-top: 14px !important;
             img{
                 display: none;
@@ -113,21 +113,20 @@
                     display: inline-block !important;
                 }
             }
-        }  
+        }
     }
     .main_nav{
         padding-top: 0 !important;
         li a{
             color: $heading !important;
         }
-    }  
+    }
     .navbar-nav.navbar-right{
         padding-top: 0 !important;
-        li a { 
+        li a {
             color: $heading !important;
         }
-    } 
-} 
+    }
+}
 /* End Main Menu tow css
-============================================================================================ */  
- 
+============================================================================================ */

@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 10px;
     display: block;
-    overflow: hidden;   
+    overflow: hidden;
     background-color: #f4f7f9;
     .countapar-container{
         padding: 0 165px;
@@ -12,18 +12,18 @@
         float: left;
         margin-top: 0;
         padding-bottom: 30px;
-        .media-left{  
-            img{ 
-                padding-right: 20px; 
+        .media-left{
+            img{
+                padding-right: 20px;
             }
         }
-        .media-body{ 
-            span{ 
+        .media-body{
+            span{
                 font-size: 60px;
                 font-family: $fira;
                 font-weight: bold;
                 color: $hover;
-                margin-top: -6px; 
+                margin-top: -6px;
                 line-height: 1;
                 display: inline-block;
             }
@@ -32,7 +32,7 @@
                 color: $p;
                 padding-top: 7px;
             }
-        } 
+        }
         &:nth-child(2){
             .middle_text{
                 padding-left: 20px;
@@ -50,4 +50,4 @@
             }
         }
     }
-} 
+}

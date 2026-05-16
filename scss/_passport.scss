@@ -1,4 +1,4 @@
-.european_passport{ 
+.european_passport{
     background: url("../img/applay_bg.jpg") no-repeat fixed;
     background-size: cover;
     text-align: center;
@@ -9,7 +9,7 @@
         color: #fff;
         padding-bottom: 70px;
     }
-    
+
     .learn_mor{
         text-transform: uppercase;
         color: #fff;
@@ -23,7 +23,7 @@
         margin-bottom: 10px;
         margin-right: 7px;
         &:hover, &:focus, &.active{
-            background: $hover; 
+            background: $hover;
             border-color: $hover;
         }
     }

@@ -4,9 +4,9 @@
 @media (min-width:1260px){
     .custom-container{
         min-width: 1260px;
-        margin: 0 auto;  
+        margin: 0 auto;
     }
-} 
+}
 .sub-container{
     padding: 0 165px;
 }
@@ -18,7 +18,7 @@
 .row.m0{
     padding: 0px;
     margin: 0px;
-} 
+}
 body{
 	font-family: $fira;
     h1,h2,h3,h4,h5,h6{
@@ -28,14 +28,14 @@ body{
 		font-family: $muli;
 		line-height: 25px;
 		color: $p;
-        margin: 0; 
-	} 
+        margin: 0;
+	}
 	/*Section Fix*/
 	section, header, footer{
-		&.row{            
-			margin: 0; 
+		&.row{
+			margin: 0;
 		}
-	} 
+	}
 }
 /*Ancore*/
 a,.btn,button{
@@ -44,25 +44,25 @@ a,.btn,button{
     &:before,&:after{
         @include transition;
     }
-    &:focus,&:hover{  
+    &:focus,&:hover{
         outline: none;
         text-decoration: none;
-        @include transition; 
+        @include transition;
     }
 }
 ul{
     list-style: none;
     margin: 0px;
     padding: 0px;
-}  
+}
 /* End Prefix Styles css
 ============================================================================================ */
 
 /* Check_tittle
 ============================================================================================ */
-.check_tittle{ 
+.check_tittle{
     text-align: center;
-    display: block; 
+    display: block;
     h4{
         font: 400 16px $muli;
         color: $p;
@@ -78,12 +78,12 @@ ul{
             position: absolute;
             width: 160px;
             height: 6px;
-            background: $hover; 
+            background: $hover;
             left: 50%;
             transform: translateX(-50%);
             bottom: -35px;
         }
     }
-} 
+}
 /* End Check_tittle
-============================================================================================ */  
+============================================================================================ */
