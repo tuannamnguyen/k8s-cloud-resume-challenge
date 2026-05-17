@@ -2,7 +2,7 @@ module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
   name               = "${var.project_name}-${var.environment}"
-  kubernetes_version = "1.33"
+  kubernetes_version = var.k8s_cluster_version
 
   compute_config = {
     enabled    = true
