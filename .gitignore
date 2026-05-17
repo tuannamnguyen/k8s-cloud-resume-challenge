@@ -1,6 +1,6 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
-# Created by https://www.toptal.com/developers/gitignore/api/terraform,dotenv,venv
-# Edit at https://www.toptal.com/developers/gitignore?templates=terraform,dotenv,venv
+# Created by https://www.toptal.com/developers/gitignore/api/venv,terraform,dotenv,terragrunt
+# Edit at https://www.toptal.com/developers/gitignore?templates=venv,terraform,dotenv,terragrunt
 
 ### dotenv ###
 .env
@@ -41,6 +41,14 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+### Terragrunt ###
+# terragrunt cache directories
+**/.terragrunt-cache/*
+
+# Terragrunt debug output file (when using `--terragrunt-debug` option)
+# See: https://terragrunt.gruntwork.io/docs/reference/cli-options/#terragrunt-debug
+terragrunt-debug.tfvars.json
+
 ### venv ###
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
@@ -55,6 +63,6 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
-# End of https://www.toptal.com/developers/gitignore/api/terraform,dotenv,venv
+# End of https://www.toptal.com/developers/gitignore/api/venv,terraform,dotenv,terragrunt
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
