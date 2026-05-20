@@ -14,7 +14,13 @@ spec:
     spec:
       containers:
       - name: ecom-container
-        image: tuannamnguyen290602/ecom-web:v1
+        image: tuannamnguyen290602/ecom-web:v2
+        env:
+          - name: HERO_HEADING
+            valueFrom:
+              configMapKeyRef:
+                key: hero_heading
+                name: my-ecom-app-config
         resources:
           limits:
             memory: "128Mi"
