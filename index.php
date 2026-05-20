@@ -24,6 +24,7 @@ function loadEnv($path)
 loadEnv(__DIR__ . '/.env');
 
 $featureDarkMode = filter_var(getenv('FEATURE_DARK_MODE'), FILTER_VALIDATE_BOOLEAN);
+$heroHeading = getenv('HERO_HEADING') ?: 'Make Your Shopping Easy';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -156,7 +157,7 @@ $featureDarkMode = filter_var(getenv('FEATURE_DARK_MODE'), FILTER_VALIDATE_BOOLE
         <section class="slider_area row m0">
             <div class="slider_inner">
                 <div class="camera_caption">
-                    <h2 class="wow fadeInUp animated">Make Your Shopping Easy</h2>
+                    <h2 class="wow fadeInUp animated"><?php echo htmlspecialchars($heroHeading, ENT_QUOTES, 'UTF-8'); ?></h2>
                     <h5 class="wow fadeIn animated" data-wow-delay="0.3s">Find everything accordingly</h5>
                     <a class="learn_mor wow fadeInU" data-wow-delay="0.6s" href="#product-list">Show Now!</a>
                 </div>
