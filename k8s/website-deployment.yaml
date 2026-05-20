@@ -15,7 +15,6 @@ spec:
       containers:
       - name: ecom-container
         image: tuannamnguyen290602/ecom-web:v1
-        command: ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
         resources:
           limits:
             memory: "128Mi"

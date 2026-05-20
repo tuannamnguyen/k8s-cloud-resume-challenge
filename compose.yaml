@@ -2,7 +2,7 @@ services:
   app:
     build:
       context: .
-    command: ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
+    # command: ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
     ports:
       - "8000:8000"
     environment:
