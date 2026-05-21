@@ -49,46 +49,7 @@ $heroHeading = getenv('HERO_HEADING') ?: 'Make Your Shopping Easy';
 
         <!-- Theme style CSS -->
         <link href="css/style.css" rel="stylesheet">
-        <?php if ($featureDarkMode): ?>
-        <style>
-            body.dark-mode {
-                background: #101418;
-                color: #eef2f6;
-            }
 
-            body.dark-mode p,
-            body.dark-mode .check_tittle h4,
-            body.dark-mode .check_tittle h2,
-            body.dark-mode .best_business_area .it_works .business_content .media .media-body a,
-            body.dark-mode .best_business_area .it_works .business_content .media .media-body p {
-                color: #eef2f6;
-            }
-
-            body.dark-mode .menu_bg,
-            body.dark-mode .navbar-default .navbar-collapse,
-            body.dark-mode .navbar-default .navbar-form,
-            body.dark-mode .best_business_area {
-                background: #101418 !important;
-            }
-
-            body.dark-mode .menu_bg .main_nav li a,
-            body.dark-mode .menu_bg .navbar-nav.navbar-right li a,
-            body.dark-mode .navbar.navbar-default .main_nav li a,
-            body.dark-mode .navbar.navbar-default .navbar-nav.navbar-right li a {
-                color: #eef2f6 !important;
-            }
-
-            body.dark-mode .best_business_area .it_works .business_content img {
-                border-color: #1c242c;
-                box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.7);
-            }
-
-            body.dark-mode .error-content {
-                background: #3a1418;
-                color: #ffb4b4;
-            }
-        </style>
-        <?php endif; ?>
 <!--        <link href="css/responsive.css" rel="stylesheet">  -->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

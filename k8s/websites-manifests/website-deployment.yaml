@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ecom-deployment
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: my-ecom-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ecom-container
-        image: tuannamnguyen290602/ecom-web:v2
+        image: tuannamnguyen290602/ecom-web:v3
         env:
           - name: HERO_HEADING
             valueFrom:
