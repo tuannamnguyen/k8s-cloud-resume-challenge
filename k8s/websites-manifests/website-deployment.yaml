@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecom-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-ecom-app
+  template:
+    metadata:
+      labels:
+        app: my-ecom-app
+    spec:
+      containers:
+      - name: ecom-container
+        image: tuannamnguyen290602/ecom-web:v2
+        env:
+          - name: HERO_HEADING
+            valueFrom:
+              configMapKeyRef:
+                key: hero_heading
+                name: my-ecom-app-config
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000

@@ -2,14 +2,10 @@ services:
   app:
     build:
       context: .
-    command: ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
+    # command: ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
     ports:
-      - "9000:8000"
-    environment:
-      DB_HOST: db
-      DB_USER: ecomuser
-      DB_PASSWORD: ecompassword
-      DB_NAME: ecomdb
+      - "8000:8000"
+    env_file: ".env"
     depends_on:
       db:
         condition: service_healthy
