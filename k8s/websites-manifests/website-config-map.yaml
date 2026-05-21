@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: my-ecom-app-config
 data:
-  hero_heading: "test env lololol"
+  hero_heading: "test env lolololzk"
