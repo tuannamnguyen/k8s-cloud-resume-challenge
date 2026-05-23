@@ -22,8 +22,11 @@ spec:
                 key: hero_heading
                 name: my-ecom-app-config
         resources:
-          limits:
+          requests:
             memory: "128Mi"
             cpu: "500m"
+          limits:
+            memory: "128Mi"
+
         ports:
         - containerPort: 8000
