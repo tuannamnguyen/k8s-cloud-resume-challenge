@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: ecom-container
-          image: tuannamnguyen290602/ecom-web:v5
+          image: tuannamnguyen290602/ecom-web:v55
           env:
             - name: HERO_HEADING
               valueFrom:
