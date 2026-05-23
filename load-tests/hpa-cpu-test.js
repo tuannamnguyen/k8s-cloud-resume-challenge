@@ -2,7 +2,7 @@ import http from 'k6/http';
 import { check, sleep } from 'k6';
 import exec from 'k6/execution';
 
-const BASE_URL = (__ENV.BASE_URL || 'http://localhost:9000').replace(/\/$/, '');
+const BASE_URL = (__ENV.BASE_URL);
 const TARGET_PATH = __ENV.TARGET_PATH || '/';
 
 export const options = {
@@ -27,7 +27,7 @@ export const options = {
 };
 
 export default function () {
-  const url = `${BASE_URL}${TARGET_PATH}`;
+  const url = `${BASE_URL}`;
   const response = http.get(url, {
     headers: {
       'Cache-Control': 'no-cache',
