@@ -1,4 +1,13 @@
 <?php
+// Lightweight liveness endpoint for Kubernetes probes.
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+if ($requestPath === '/healthz' || $requestPath === '/health') {
+    http_response_code(200);
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'ok']);
+    exit;
+}
+
 // Function to load environment variables from a .env file
 function loadEnv($path)
 {
