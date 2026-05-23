@@ -12,20 +12,27 @@ spec:
         app: my-ecom-app
     spec:
       containers:
-      - name: ecom-container
-        image: tuannamnguyen290602/ecom-web:v5
-        env:
-          - name: HERO_HEADING
-            valueFrom:
-              configMapKeyRef:
-                key: hero_heading
-                name: my-ecom-app-config
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "500m"
-          limits:
-            memory: "128Mi"
-
-        ports:
-        - containerPort: 8000
+        - name: ecom-container
+          image: tuannamnguyen290602/ecom-web:v5
+          env:
+            - name: HERO_HEADING
+              valueFrom:
+                configMapKeyRef:
+                  key: hero_heading
+                  name: my-ecom-app-config
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "500m"
+            limits:
+              memory: "128Mi"
+          livenessProbe:
+            initialDelaySeconds: 10
+            failureThreshold: 3
+            periodSeconds: 3
+            timeoutSeconds: 3
+            httpGet:
+              path: /healthz
+              port: 8000
+          ports:
+            - containerPort: 8000
