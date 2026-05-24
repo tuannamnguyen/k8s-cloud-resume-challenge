@@ -14,7 +14,7 @@ spec:
       volumes:
         - name: secret-volume
           secret:
-            secretName: dotfile-secret
+            secretName: ecom-app-secret
       containers:
         - name: ecom-container
           image: tuannamnguyen290602/ecom-web:v5
