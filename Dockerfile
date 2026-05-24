@@ -19,7 +19,9 @@ FROM php:8.3.6-apache
 
 # Use the default production configuration for PHP runtime arguments, see
 # https://github.com/docker-library/docs/tree/master/php#configuration
-RUN docker-php-ext-install mysqli && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+RUN docker-php-ext-install mysqli \
+    && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"\
+    && curl -sfS https://dotenvx.sh/install.sh | sh
 
 COPY . /var/www/html/
 
@@ -29,4 +31,4 @@ EXPOSE 80
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
 USER www-data
 
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
+CMD ["dotenvx", "run", "-f", ".env.prod", "--", "php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
