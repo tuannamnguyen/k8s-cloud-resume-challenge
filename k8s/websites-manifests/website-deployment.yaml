@@ -11,6 +11,10 @@ spec:
       labels:
         app: my-ecom-app
     spec:
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: dotfile-secret
       containers:
         - name: ecom-container
           image: tuannamnguyen290602/ecom-web:v5
@@ -26,6 +30,10 @@ spec:
               cpu: "500m"
             limits:
               memory: "128Mi"
+          volumeMounts:
+            - name: secret-volume
+              readOnly: true
+              mountPath: "/etc/secret-volume"
           livenessProbe:
             initialDelaySeconds: 10
             failureThreshold: 3
