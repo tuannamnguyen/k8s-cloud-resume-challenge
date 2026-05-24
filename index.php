@@ -1,13 +1,4 @@
 <?php
-// Lightweight liveness endpoint for Kubernetes probes.
-$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
-if ($requestPath === '/healthz' || $requestPath === '/health') {
-    http_response_code(200);
-    header('Content-Type: application/json');
-    echo json_encode(['status' => 'ok']);
-    exit;
-}
-
 // Function to load environment variables from a .env file
 function loadEnv($path)
 {
@@ -31,6 +22,22 @@ function loadEnv($path)
 
 // Load environment variables from .env file
 loadEnv(__DIR__ . '/.env');
+
+// Lightweight JSON endpoints.
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+if ($requestPath === '/healthz' || $requestPath === '/health') {
+    http_response_code(200);
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'ok']);
+    exit;
+}
+
+if ($requestPath === '/db-user') {
+    http_response_code(200);
+    header('Content-Type: application/json');
+    echo json_encode(['DB_USER' => getenv('DB_USER') ?: null]);
+    exit;
+}
 
 $featureDarkMode = filter_var(getenv('FEATURE_DARK_MODE'), FILTER_VALIDATE_BOOLEAN);
 $heroHeading = getenv('HERO_HEADING') ?: 'Make Your Shopping Easy';
