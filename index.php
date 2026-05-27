@@ -39,6 +39,45 @@ if ($requestPath === '/db-user') {
     exit;
 }
 
+if ($requestPath === '/cpu') {
+    $seconds = filter_input(INPUT_GET, 'seconds', FILTER_VALIDATE_INT, [
+        'options' => [
+            'default' => 2,
+            'min_range' => 1,
+            'max_range' => 30,
+        ],
+    ]);
+
+    if ($seconds === false) {
+        $seconds = 2;
+    }
+
+    $start = hrtime(true);
+    $end = $start + ($seconds * 1000000000);
+    $iterations = 0;
+    $hash = '';
+    $payload = random_bytes(32);
+
+    while (hrtime(true) < $end) {
+        $hash = hash('sha256', $payload . $hash . $iterations);
+        $iterations++;
+    }
+
+    $durationMs = (hrtime(true) - $start) / 1000000;
+
+    http_response_code(200);
+    header('Content-Type: application/json');
+    echo json_encode([
+        'status' => 'ok',
+        'task' => 'cpu-intensive',
+        'requested_seconds' => $seconds,
+        'duration_ms' => round($durationMs, 2),
+        'iterations' => $iterations,
+        'checksum' => substr($hash, 0, 12),
+    ]);
+    exit;
+}
+
 $featureDarkMode = filter_var(getenv('FEATURE_DARK_MODE'), FILTER_VALIDATE_BOOLEAN);
 $heroHeading = getenv('HERO_HEADING') ?: 'Make Your Shopping Easy';
 ?>
