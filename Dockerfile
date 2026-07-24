@@ -25,7 +25,7 @@ RUN docker-php-ext-install mysqli \
 
 COPY . /var/www/html/
 
-EXPOSE 80
+EXPOSE 8000
 
 # Switch to a non-privileged user (defined in the base image) that the app will run under.
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
