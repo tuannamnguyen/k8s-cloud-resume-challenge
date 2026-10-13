@@ -20,6 +20,18 @@ function loadEnv($path)
     return true;
 }
 
+// Read a mounted Kubernetes Secret key, falling back when it is unavailable.
+function secretValue($key, $fallback = null)
+{
+    $path = '/etc/secrets/' . $key;
+    if (!is_readable($path)) {
+        return $fallback;
+    }
+
+    $value = file_get_contents($path);
+    return $value === false ? $fallback : rtrim($value, "\r\n");
+}
+
 // Load environment variables from .env file
 loadEnv(__DIR__ . '/.env');
 
@@ -35,7 +47,7 @@ if ($requestPath === '/healthz' || $requestPath === '/health') {
 if ($requestPath === '/db-user') {
     http_response_code(200);
     header('Content-Type: application/json');
-    echo json_encode(['DB_USER' => getenv('DB_USER') ?: null]);
+    echo json_encode(['DB_USER' => secretValue('db-user', getenv('DB_USER') ?: null)]);
     exit;
 }
 
@@ -191,8 +203,8 @@ $heroHeading = getenv('HERO_HEADING') ?: 'Make Your Shopping Easy';
                         // $link = mysqli_connect('172.20.1.101', 'ecomuser', 'ecompassword', 'ecomdb');
                         // Fetch database connection details directly from environment variables
                         $dbHost = getenv('DB_HOST') ?: 'mysql-service';
-                        $dbUser = getenv('DB_USER') ?: 'ecomuser';
-                        $dbPassword = getenv('DB_PASSWORD') ?: 'ecompassword';
+                        $dbUser = secretValue('db-user', getenv('DB_USER') ?: 'ecomuser');
+                        $dbPassword = secretValue('db-pass', getenv('DB_PASSWORD') ?: 'ecompassword');
                         $dbName = getenv('DB_NAME') ?: 'ecomdb';
 
                         // Attempt to connect to the database
